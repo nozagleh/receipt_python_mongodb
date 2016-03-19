@@ -7,7 +7,7 @@ html{height:100%;width:100%;}
 body{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size: 1em;
-	background-color:$gray;
+	background-color:$white;
 	width:100%;
 	height:100%;
 }
@@ -16,7 +16,14 @@ h1{}
 
 p{}
 
-table{border-collapse:collapse;}
+table{border-collapse:collapse; font-size:1.5em;}
+tr{}
+td{}
+
+%fullwidthBlack{
+	width:100%;
+	background-color:$black;
+}
 
 
 
