@@ -1,14 +1,33 @@
 @import "partials/colors";
+@import "partials/textsize";
 
+/*----------------------------HTML BASE----------------------------*/
 *{margin:0;padding:0;}
-
 html{height:100%;width:100%;}
-
 body{
 	font-family:Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	background-color:$gray;
+	font-size: $medium;
+	background-color:$white;
 	width:100%;
 	height:100%;
 }
+div{box-sizing:border-box;}
+
+/*----------------------------TEXT BASE----------------------------*/
+h1{}
+p{}
+a{text-decoration:none; color:$white; font-size:$medium;}
+
+/*----------------------------TABLE BASE----------------------------*/
+table{border-collapse:collapse; font-size: $large;}
+tr{}
+td{}
+
+/*----------------------------FUNCTIONS----------------------------*/
+%fullwidthBlack{
+	width:100%;
+	background-color:$black;
+}
+
+
 

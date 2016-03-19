@@ -1,10 +1,11 @@
-/* line 3, ../sass/partials/_base.scss */
+/*----------------------------HTML BASE----------------------------*/
+/* line 5, ../sass/partials/_base.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 5, ../sass/partials/_base.scss */
+/* line 6, ../sass/partials/_base.scss */
 html {
   height: 100%;
   width: 100%;
@@ -14,15 +15,196 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  background-color: #555555;
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
 }
 
-/* line 5, ../sass/styles.scss */
+/* line 14, ../sass/partials/_base.scss */
+div {
+  box-sizing: border-box;
+}
+
+/*----------------------------TEXT BASE----------------------------*/
+/* line 19, ../sass/partials/_base.scss */
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1em;
+}
+
+/*----------------------------TABLE BASE----------------------------*/
+/* line 22, ../sass/partials/_base.scss */
+table {
+  border-collapse: collapse;
+  font-size: 1.3em;
+}
+
+/*----------------------------FUNCTIONS----------------------------*/
+/* line 8, ../sass/styles.scss */
+.container {
+  min-width: 1024px;
+  min-height: 100%;
+  margin-bottom: -120px;
+}
+
+/* line 10, ../sass/styles.scss */
 #wrapper {
-  background-color: #e6e6e6;
+  background-color: #FFFFFF;
   width: 1024px;
-  height: 100%;
   margin: 0 auto;
+}
+
+/* line 16, ../sass/styles.scss */
+#header {
+  height: 80px;
+  background-color: #d03636;
+  width: 100%;
+}
+/* line 21, ../sass/styles.scss */
+#header .logo {
+  height: 100%;
+  margin-left: 10%;
+}
+/* line 24, ../sass/styles.scss */
+#header .logo h1 {
+  color: #FFFFFF;
+  font-size: 2em;
+  padding-top: 0.66667em;
+}
+/* line 28, ../sass/styles.scss */
+#header .logo h1:hover {
+  color: #9d0000;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/* line 36, ../sass/styles.scss */
+#header .menubtn {
+  display: block;
+  margin-top: 20px;
+  margin-right: 40px;
+  height: inherit;
+  width: 40px;
+  height: 80px;
+  float: left;
+  position: absolute;
+  overflow: auto;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0px);
+  -moz-transform: rotate(0deg);
+  transition: 0.4s;
+}
+/* line 50, ../sass/styles.scss */
+#header .menubtn:hover {
+  width: 50px;
+  cursor: pointer;
+}
+/* line 54, ../sass/styles.scss */
+#header .menubtn span {
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+/* line 60, ../sass/styles.scss */
+#header .menubtn #lone {
+  top: 0%;
+}
+/* line 61, ../sass/styles.scss */
+#header .menubtn #ltwo {
+  top: 20%;
+}
+/* line 62, ../sass/styles.scss */
+#header .menubtn #lthree {
+  top: 40%;
+}
+
+/* line 66, ../sass/styles.scss */
+.barextended {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+/* line 73, ../sass/styles.scss */
+.barextended > #lone {
+  top: 45%;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+/* line 80, ../sass/styles.scss */
+.barextended > #lthree {
+  bottom: 50%;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+/* line 88, ../sass/styles.scss */
+.menubar {
+  /*Hide the sidebar for now.*/
+  display: block;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 100%;
+  position: fixed;
+  width: 25%;
+  background-color: #d03636;
+}
+/* line 100, ../sass/styles.scss */
+.menubar nav ul li {
+  display: block;
+}
+/* line 102, ../sass/styles.scss */
+.menubar nav ul li a {
+  font-size: 2em;
+  text-transform: lowercase;
+  display: block;
+  padding: 10px 0px 10px 15px;
+}
+
+/* line 113, ../sass/styles.scss */
+.content {
+  width: 100%;
+}
+/* line 116, ../sass/styles.scss */
+.content .rbox {
+  display: inline-block;
+  padding: 20px 30px;
+}
+/* line 119, ../sass/styles.scss */
+.content .rbox .storename {
+  font-size: 2em;
+  color: #d03636;
+}
+/* line 123, ../sass/styles.scss */
+.content .rbox .amount, .content .rbox .day {
+  text-align: right;
+  font-size: 1.6em;
+  color: #2b2b2b;
+}
+/* line 127, ../sass/styles.scss */
+.content .rbox .amount .currency, .content .rbox .day .currency {
+  border-bottom: 1px dotted #2b2b2b;
+}
+/* line 131, ../sass/styles.scss */
+.content .rbox .day {
+  padding-top: 4px;
+  font-size: 1em;
+}
+
+/*TODO: fix footer to bottom without absolute*/
+/* line 140, ../sass/styles.scss */
+#footer {
+  background-color: #2b2b2b;
+  width: 100%;
+  display: block;
+  height: 120px;
 }
