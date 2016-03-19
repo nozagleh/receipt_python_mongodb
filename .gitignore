@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 _stie
 .sass-cache
+=======
+_site
+.sass_cache
+>>>>>>> b0ae9cc3ca7c5790093772013f14f548eafafe79
 *.scssc
 *.swp
