@@ -62,6 +62,17 @@ table {
   width: 100%;
 }
 /* line 20, ../sass/styles.scss */
+#header .logo {
+  height: 100%;
+  margin-left: 10%;
+}
+/* line 23, ../sass/styles.scss */
+#header .logo h1 {
+  color: #FFFFFF;
+  font-size: 2em;
+  padding-top: 0.66667em;
+}
+/* line 30, ../sass/styles.scss */
 #header .menubtn {
   display: block;
   margin-top: 20px;
@@ -70,34 +81,38 @@ table {
   width: 40px;
   height: 80px;
   float: left;
-  position: relative;
+  position: absolute;
   overflow: auto;
   transform: rotate(0deg);
   -webkit-transform: rotate(0px);
   -moz-transform: rotate(0deg);
   transition: 0.4s;
 }
-/* line 34, ../sass/styles.scss */
+/* line 44, ../sass/styles.scss */
+#header .menubtn:hover {
+  width: 50px;
+}
+/* line 47, ../sass/styles.scss */
 #header .menubtn span {
   width: 100%;
   height: 2px;
   background-color: #FFFFFF;
   position: absolute;
 }
-/* line 40, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 #header .menubtn #lone {
-  top: 10%;
+  top: 0%;
 }
-/* line 41, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 #header .menubtn #ltwo {
-  top: 30%;
+  top: 20%;
 }
-/* line 42, ../sass/styles.scss */
+/* line 55, ../sass/styles.scss */
 #header .menubtn #lthree {
-  top: 50%;
+  top: 40%;
 }
 
-/* line 46, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 .barextended {
   transform: rotate(90deg);
   -webkit-transform: rotate(120deg);
@@ -105,7 +120,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .barextended > #lone {
   top: 45%;
   transform: rotate(90deg);
@@ -114,7 +129,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 .barextended > #lthree {
   bottom: 50%;
   transform: rotate(90deg);
@@ -123,7 +138,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 68, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 .menubar {
   /*Hide the sidebar for now.*/
   display: none;
@@ -132,11 +147,11 @@ table {
   width: 25%;
   background-color: #d03636;
 }
-/* line 79, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 .menubar nav ul li {
   display: block;
 }
-/* line 81, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 .menubar nav ul li a {
   font-size: 2em;
   text-transform: lowercase;
@@ -144,38 +159,38 @@ table {
   padding: 10px 0px 10px 15px;
 }
 
-/* line 92, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .content {
   width: 100%;
 }
-/* line 95, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 .content .rbox {
   display: inline-block;
   padding: 20px 30px;
 }
-/* line 98, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 .content .rbox .storename {
   font-size: 2em;
   color: #d03636;
 }
-/* line 102, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 .content .rbox .amount, .content .rbox .day {
   text-align: right;
   font-size: 1.6em;
   color: #2b2b2b;
 }
-/* line 106, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .content .rbox .amount .currency, .content .rbox .day .currency {
   border-bottom: 1px dotted #2b2b2b;
 }
-/* line 110, ../sass/styles.scss */
+/* line 123, ../sass/styles.scss */
 .content .rbox .day {
   padding-top: 4px;
   font-size: 1em;
 }
 
 /*TODO: fix footer to bottom without absolute*/
-/* line 119, ../sass/styles.scss */
+/* line 132, ../sass/styles.scss */
 #footer {
   background-color: #2b2b2b;
   width: 100%;
