@@ -1,1 +1,13 @@
-@mixin 
+//include this in other transforms like rotate(), @include transform(rotate($var))
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+//transition mixin
+@mixin transition($duration){
+	-webkit-transition: $duration;
+	transition: $duration;
+}

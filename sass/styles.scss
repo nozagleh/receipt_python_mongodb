@@ -24,6 +24,11 @@
 			color: $white;
 			font-size: $xx-large;
 			padding-top:($xx-large/3);
+			&:hover{
+				color: $dark-red;
+				cursor: pointer;
+				transition: 0.5s;
+			}
 		}
 	}
 
@@ -43,6 +48,7 @@
 		transition: 0.4s;
 		&:hover{
 			width: 50px;
+			cursor: pointer;
 		}
 		span{
 			width: 100%;
