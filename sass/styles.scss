@@ -1,0 +1,10 @@
+@import "compass";
+@import "partials/base";
+@import "partials/colors";
+
+#wrapper{
+	background-color:$light-gray;
+	width:1024px;
+	height:100%;
+	margin:0 auto;
+}
