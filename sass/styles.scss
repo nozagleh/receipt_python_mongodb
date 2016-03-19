@@ -2,6 +2,7 @@
 @import "partials/base";
 @import "partials/colors";
 @import "partials/textsize";
+@import "partials/mixin";
 @import "compass/css3";
 
 .container{min-width:1024px; min-height:100%; margin-bottom:-120px;}
@@ -27,7 +28,7 @@
 			&:hover{
 				color: $dark-red;
 				cursor: pointer;
-				transition: 0.5s;
+				@include transition(0.5s);
 			}
 		}
 	}
@@ -86,8 +87,9 @@
 
 .menubar{
 	/*Hide the sidebar for now.*/
-	display:none;
-
+	display:block;
+	opacity:0;
+	@include transition(0.5s);
 	height:100%;
 	position:fixed;
 	width:25%;
