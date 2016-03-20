@@ -1,5 +1,8 @@
+#set encoding to UTF-8
+# -*- coding: utf-8 -*-
 #import mongoclient from pymongo library
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 
 class Connector:
 	#initilize variables
@@ -26,14 +29,13 @@ class Connector:
 		
 
 	#create the four pillars of db based programming, CRUD
-	#TODO: methods with variable argument number for working with all collections
-	def create(self, storename, amount, currency, date, typeOf, deprecated):
-		#define data to insert
-		v = {"storeName": storename,"amountCurrency": amount,"typeOfCurrency": currency,"date": currency,"typeOfReceipt": typeOf,"deprecated": deprecated}
+
+	#method takes in a whole document
+	def create(self, document):
 		#insert into collection
 		try:
 			#try inserting the document into the database
-			collection.insert(v)
+			collection.insert(document)
 		except pymongo.error.OperationFailure, e:
 			print("Error code: %s" % e)
 
@@ -45,24 +47,18 @@ class Connector:
 		for row in data:
 			print(row)
 	
-	def update():
-		return 0
+	def update(self, id, document):
+		try:
+			print(document)
+			collection.update({'_id': ObjectId(id)},
+				{'$set': document})
+		except pymongo.error.OperationFailure, e:
+			print("Error code: %s" % e)
 	
 	def delete(): 
 		return 0
 
-def main():
-	#establish a new connection
-	x = Connector('localhost',27017,'receipts','receipt')
 
-	#creates a new document for inserting
-	x.create('ICA Maxi', 556, 'SEK', '21.01.2016','Food',False)
-
-	#reads all current documents
-	x.read()
-
-if __name__ == '__main__':
-	main()
 
 
 """MongoDB stores data in JSON format. MongoDB is a nosql language, meaning it is not relational. The structure is documentational,
