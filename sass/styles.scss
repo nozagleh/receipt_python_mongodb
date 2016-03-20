@@ -22,6 +22,7 @@
 		height:100%;
 		margin-left: 10%;
 		h1{
+			display: inline-block;
 			color: $white;
 			font-size: $xx-large;
 			padding-top:($xx-large/3);
@@ -30,6 +31,13 @@
 				cursor: pointer;
 				@include transition(0.5s);
 			}
+		}
+		img[alt="Mango Logo"]{
+			display: inline-block;
+			margin-top: 30px;
+			height: 20px;
+			width: auto;
+			//content: image-url("mango.png");
 		}
 	}
 
