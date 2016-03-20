@@ -1,0 +1,93 @@
+$def with (names)
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mango</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="javascripts/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="static/stylesheets/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+				<div class="menubtn">
+					<span id="lone"></span>
+					<span id="ltwo"></span>
+					<span id="lthree"></span>
+				</div>
+				<div class="logo">
+					<h1>MANGO</h1>
+					<img src="static/images/mango.png" alt="Mango Logo"/>
+				</div>
+			</div>
+			<div class="menubar">
+				<nav>
+					<ul>
+						<li><a href="">LINK 1</a></li>
+						<li><a href="">LINK 2</a></li>
+						<li><a href="">LINK 3</a></li>
+						<li><a href="">LINK 4</a></li>
+						<li><a href="">LINK 5</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="wrapper">
+				<div class="content">
+					$for n in names:
+						<div class="rbox">
+							<h1 class="storename">$n['storeName']</h1>
+							<h2 class="amount">$n['amountCurrency'] <span class="currency">$n['typeOfCurrency']</span></h2>
+							<h3 class="day">$n['date']</h3>
+						</div>
+					<!--
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div>
+					<div class="rbox">
+						<h1 class="storename">Store Name</h1>
+						<h2 class="amount">360 <span class="currency">SEK</span></h2>
+						<h3 class="day">01.01.2016</h3>
+					</div-->
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+				
+		</div>
+	</body>
+</html>
