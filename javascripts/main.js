@@ -9,10 +9,10 @@ $(document).ready(function(){
 var showing = false;
 function showAndHideMenu(v){
 	if (showing == false) {
-		$(v).css('opacity', '1');
+		$(v).css('display', 'block');
 		showing = true;
 	}else{
-		$(v).css('opacity', '0');
+		$(v).css('display', 'none');
 		showing = false;
 	};
 }

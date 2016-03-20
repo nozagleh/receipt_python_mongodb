@@ -64,7 +64,7 @@ table {
 /* line 21, ../sass/styles.scss */
 #header .logo {
   height: 100%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 /* line 24, ../sass/styles.scss */
 #header .logo h1 {
@@ -149,13 +149,13 @@ table {
 /* line 88, ../sass/styles.scss */
 .menubar {
   /*Hide the sidebar for now.*/
-  display: block;
-  opacity: 0;
+  display: none;
+  opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   height: 100%;
   position: fixed;
-  width: 25%;
+  width: 100%;
   background-color: #d03636;
 }
 /* line 100, ../sass/styles.scss */
