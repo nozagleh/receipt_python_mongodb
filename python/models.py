@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 class Connector:
 	#initilize variables
-	servername, portnr, dbname, collectionname, client, db, collection
+	#servername, portnr, dbname, collectionname, client, db, collection
 
 	#define init method with no arguments
 
@@ -12,11 +12,17 @@ class Connector:
 		#set servername and portnr
 		self.servername = servername
 		self.portnr = portnr
-		self.dbname = dbname;
-		self.collectionname = collectionname;
-		client = MongoClient(servername,portnr);
-		db = dbname;
-		collection = collectionname;
+		self.dbname = dbname
+		self.collectionname = collectionname
+		try:
+			client = MongoClient(servername,portnr)
+			db = dbname
+			collection = collectionname
+		except Exception, e:
+			print("problem")
+		finally:
+			print("connected to mongodb")
+		
 
 	#create the four pillars of db based programming, CRUD
 	def create():
@@ -28,7 +34,7 @@ class Connector:
 	def delete(): 
 		return 0
 
-print("hello")
+x = Connector()
 
 
 """MongoDB stores data in JSON format. MongoDB is a nosql language, meaning it is not relational. The structure is documentational,
