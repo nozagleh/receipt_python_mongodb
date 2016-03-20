@@ -1,13 +1,35 @@
 #import mongoclient from pymongo library
 from pymongo import MongoClient
 
-#set client as new connection
-client = MongoClient('localhost',25042);
+class Connector:
+	#initilize variables
+	servername, portnr, dbname, collectionname, client, db, collection
 
-#set db as the Mongo DB
-db = client.nameOfDatabase;
-#set collection from database
-coll = db.nameOfDatabase;
+	#define init method with no arguments
+
+	#define init method that takes servername and portnr as arguments
+	def __init__(self, servername = 'localhost', portnr = 27017, dbname = 'test', collectionname = 'testcollection'):
+		#set servername and portnr
+		self.servername = servername
+		self.portnr = portnr
+		self.dbname = dbname;
+		self.collectionname = collectionname;
+		client = MongoClient(servername,portnr);
+		db = dbname;
+		collection = collectionname;
+
+	#create the four pillars of db based programming, CRUD
+	def create():
+		return 0
+	def read():
+		return 0
+	def update():
+		return 0
+	def delete(): 
+		return 0
+
+print("hello")
+
 
 """MongoDB stores data in JSON format. MongoDB is a nosql language, meaning it is not relational. The structure is documentational,
  no objects are stored, rather documents are stored in a collection that is in turn stored in a database."""
