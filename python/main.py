@@ -9,8 +9,10 @@ def main():
 	a = {"storeName": 'Hemköp',"amountCurrency": 1260,"typeOfCurrency": 'SEK',"date": '29.10.2015',"typeOfReceipt": 'Food',"deprecated": False}
 	#call the create method
 	#x.create(a)
-	b = {"storeName":'Pressbyrån',"typeOfReceipt":"Entertainment"}
-	x.update('56eead25316a1164283b8733',b)
+	store = 'Pressbyrån'
+	b = {"storeName":store,"typeOfReceipt":"Entertainment"}
+	print(b)
+	#x.update('56eead25316a1164283b8733',b)
 	#reads all current documents
 	x.read()
 

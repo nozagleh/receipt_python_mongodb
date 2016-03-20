@@ -45,7 +45,9 @@ class Connector:
 
 		#iterate through the data and print to console for now
 		for row in data:
-			print(row)
+			a = row['storeName']
+			print(a)
+			#print row
 	
 	def update(self, id, document):
 		try:
