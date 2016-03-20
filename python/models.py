@@ -42,12 +42,13 @@ class Connector:
 	def read(self):
 		#read the data from collection
 		data = collection.find()
-
+		result = []
 		#iterate through the data and print to console for now
 		for row in data:
-			a = row['storeName']
-			print(a)
+			result.append(row)
+			#print(a)
 			#print row
+		return result
 	
 	def update(self, id, document):
 		try:

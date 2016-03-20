@@ -11,10 +11,12 @@ def main():
 	#x.create(a)
 	store = 'Pressbyrån'
 	b = {"storeName":store,"typeOfReceipt":"Entertainment"}
-	print(b)
+	#print(b)
 	#x.update('56eead25316a1164283b8733',b)
 	#reads all current documents
-	x.read()
+	b = x.read()
+	#prints the store name of the first array value
+	print b[0]['storeName']
 
 #main method, needed for running the code for now.
 if __name__ == '__main__':

@@ -1,3 +1,5 @@
+$def with (names)
+
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -6,7 +8,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script type="text/javascript" src="javascripts/main.js"></script>
-		<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/styles.css">
 	</head>
 	<body>
 		<div class="container">
@@ -34,6 +36,13 @@
 			</div>
 			<div id="wrapper">
 				<div class="content">
+					$for n in names:
+						<div class="rbox">
+							<h1 class="storename">$n</h1>
+							<h2 class="amount">360 <span class="currency">SEK</span></h2>
+							<h3 class="day">01.01.2016</h3>
+						</div>
+					<!--
 					<div class="rbox">
 						<h1 class="storename">Store Name</h1>
 						<h2 class="amount">360 <span class="currency">SEK</span></h2>
@@ -73,12 +82,7 @@
 						<h1 class="storename">Store Name</h1>
 						<h2 class="amount">360 <span class="currency">SEK</span></h2>
 						<h3 class="day">01.01.2016</h3>
-					</div>
-					<div class="rbox">
-						<h1 class="storename">Store Name</h1>
-						<h2 class="amount">360 <span class="currency">SEK</span></h2>
-						<h3 class="day">01.01.2016</h3>
-					</div>
+					</div-->
 				</div>
 			</div>
 		</div>
