@@ -16,8 +16,8 @@ class Connector:
 
 		try:
 			client = MongoClient(servername,portnr)
-			db = client['test']
-			collection = db['testcollection']
+			db = client[dbname]
+			collection = db[collectionname]
 			print(db.collection.count())
 		except pymongo.errors.ConnectionFailure, e:
 			print("problem connecting to MongoDB: %s" % e)
@@ -26,18 +26,22 @@ class Connector:
 		
 
 	#create the four pillars of db based programming, CRUD
-
-	def create(self):
+	#TODO: methods with variable argument number for working with all collections
+	def create(self, storename, amount, currency, date, typeOf, deprecated):
 		#define data to insert
-		v = {'x':42}
+		v = {"storeName": storename,"amountCurrency": amount,"typeOfCurrency": currency,"date": currency,"typeOfReceipt": typeOf,"deprecated": deprecated}
 		#insert into collection
-		collection.insert(v)
+		try:
+			#try inserting the document into the database
+			collection.insert(v)
+		except pymongo.error.OperationFailure, e:
+			print("Error code: %s" % e)
 
 	def read(self):
 		#read the data from collection
 		data = collection.find()
 
-		#iterate through the data and print to console
+		#iterate through the data and print to console for now
 		for row in data:
 			print(row)
 	
@@ -47,9 +51,18 @@ class Connector:
 	def delete(): 
 		return 0
 
-x = Connector()
-print(x.read())
-#print(x.create())
+def main():
+	#establish a new connection
+	x = Connector('localhost',27017,'receipts','receipt')
+
+	#creates a new document for inserting
+	x.create('ICA Maxi', 556, 'SEK', '21.01.2016','Food',False)
+
+	#reads all current documents
+	x.read()
+
+if __name__ == '__main__':
+	main()
 
 
 """MongoDB stores data in JSON format. MongoDB is a nosql language, meaning it is not relational. The structure is documentational,

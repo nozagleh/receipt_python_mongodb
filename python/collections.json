@@ -1,0 +1,34 @@
+/* receipt */
+{
+	"storeName": "Test store",
+	"amountCurrency": 300,
+	"typeOfCurrency": "SEK",
+	"date": "01.01.2016",
+	"typeOfReceipt": "Food",
+	"deprecated": false
+}
+
+{"storeName": "Test store","amountCurrency": 300,"typeOfCurrency": "SEK","date": "01.01.2016","typeOfReceipt": "Food","deprecated": false}
+
+/* type */
+{
+	"typeName": "Food",
+	"typeDesc": "Receipt for food items for daily living"
+}
+
+/* users */
+{
+	"username": "arnarf",
+	"passwd": "1234asdf",
+	"valid": true,
+	"signupDate": "31.12.2015"
+}
+
+/* userlog */
+{
+	"user_id": "@GET_ID_OF_USER",
+	"timestamp": "01.01.2016 23:30:31",
+	"action": "C",
+	"recept_id": "@GET_ID_OF_RECEIPT"
+}
+
