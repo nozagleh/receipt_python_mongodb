@@ -3,16 +3,22 @@ $(document).ready(function(){
 
 	$('.menubtn').on('click',function(){
 		/*Add better slide animation from the side*/
-		showAndHideMenu('.menubar');
+		$('#header').toggleClass('fixed');
+		//showAndHideDiv('.menubar');
+		showAndHideDiv('.menubar','display','block','none');
+	});
+	var showing = false;
+	$('#addbtn').on('click',function(event) {
+		showAndHideDiv('.addbox','display','block','none');
 	});
 });
 var showing = false;
-function showAndHideMenu(v){
+function showAndHideDiv(v,element,value1, value2){
 	if (showing == false) {
-		$(v).css('display', 'block');
+		$(v).css(element, value1);
 		showing = true;
 	}else{
-		$(v).css('display', 'none');
+		$(v).css(element, value2);
 		showing = false;
 	};
 }
