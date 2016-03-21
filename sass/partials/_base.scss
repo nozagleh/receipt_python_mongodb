@@ -13,6 +13,8 @@ body{
 }
 div{box-sizing:border-box;}
 
+textarea,input{outline:none;}
+
 /*----------------------------TEXT BASE----------------------------*/
 h1{}
 p{}
@@ -27,6 +29,18 @@ td{}
 %fullwidthBlack{
 	width:100%;
 	background-color:$black;
+}
+
+%hoveraction{
+	color: $dark-red;
+	cursor: pointer;
+	@include transition(0.5s);
+}
+
+.fixed{
+	top:0;
+	left:0;
+	position:fixed;
 }
 
 

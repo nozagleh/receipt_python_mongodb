@@ -25,8 +25,13 @@ div {
   box-sizing: border-box;
 }
 
+/* line 16, ../sass/partials/_base.scss */
+textarea, input {
+  outline: none;
+}
+
 /*----------------------------TEXT BASE----------------------------*/
-/* line 19, ../sass/partials/_base.scss */
+/* line 21, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
   color: #FFFFFF;
@@ -34,18 +39,34 @@ a {
 }
 
 /*----------------------------TABLE BASE----------------------------*/
-/* line 22, ../sass/partials/_base.scss */
+/* line 24, ../sass/partials/_base.scss */
 table {
   border-collapse: collapse;
   font-size: 1.3em;
 }
 
 /*----------------------------FUNCTIONS----------------------------*/
+/* line 34, ../sass/partials/_base.scss */
+#header .logo h1:hover, .menubar nav ul li a:hover, .content .searchinput span:hover {
+  color: #9d0000;
+  cursor: pointer;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 40, ../sass/partials/_base.scss */
+.fixed {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
 /* line 8, ../sass/styles.scss */
 .container {
   min-width: 1024px;
   min-height: 100%;
-  margin-bottom: -120px;
 }
 
 /* line 10, ../sass/styles.scss */
@@ -64,30 +85,16 @@ table {
 /* line 21, ../sass/styles.scss */
 #header .logo {
   height: 100%;
-  margin-left: 10%;
+  text-align: center;
 }
-/* line 24, ../sass/styles.scss */
+/* line 25, ../sass/styles.scss */
 #header .logo h1 {
   display: inline-block;
   color: #FFFFFF;
   font-size: 2em;
   padding-top: 0.66667em;
 }
-/* line 29, ../sass/styles.scss */
-#header .logo h1:hover {
-  color: #9d0000;
-  cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
 /* line 35, ../sass/styles.scss */
-#header .logo img[alt="Mango Logo"] {
-  display: inline-block;
-  margin-top: 30px;
-  height: 20px;
-  width: auto;
-}
-/* line 44, ../sass/styles.scss */
 #header .menubtn {
   display: block;
   margin-top: 20px;
@@ -103,32 +110,32 @@ table {
   -moz-transform: rotate(0deg);
   transition: 0.4s;
 }
-/* line 58, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
 #header .menubtn:hover {
   width: 50px;
   cursor: pointer;
 }
-/* line 62, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 #header .menubtn span {
   width: 100%;
   height: 2px;
   background-color: #FFFFFF;
   position: absolute;
 }
-/* line 68, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 #header .menubtn #lone {
   top: 0%;
 }
-/* line 69, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 #header .menubtn #ltwo {
   top: 20%;
 }
-/* line 70, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 #header .menubtn #lthree {
   top: 40%;
 }
 
-/* line 74, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .barextended {
   transform: rotate(90deg);
   -webkit-transform: rotate(120deg);
@@ -136,7 +143,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 81, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 .barextended > #lone {
   top: 45%;
   transform: rotate(90deg);
@@ -145,7 +152,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 .barextended > #lthree {
   bottom: 50%;
   transform: rotate(90deg);
@@ -154,65 +161,125 @@ table {
   transition: 0.4s;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 .menubar {
   /*Hide the sidebar for now.*/
-  display: block;
-  opacity: 0;
+  display: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   height: 100%;
   position: fixed;
-  width: 25%;
+  top: 80px;
+  width: 100%;
   background-color: #d03636;
 }
-/* line 108, ../sass/styles.scss */
-.menubar nav ul li {
-  display: block;
+/* line 97, ../sass/styles.scss */
+.menubar nav {
+  padding-top: 40px;
 }
-/* line 110, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
+.menubar nav ul {
+  text-align: center;
+}
+/* line 102, ../sass/styles.scss */
 .menubar nav ul li a {
   font-size: 2em;
   text-transform: lowercase;
   display: block;
-  padding: 10px 0px 10px 15px;
+  padding: 10px 0px;
 }
 
-/* line 121, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .content {
   width: 100%;
+  margin-bottom: 80px;
 }
-/* line 124, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
+.content .searchinput {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+/* line 126, ../sass/styles.scss */
+.content .searchinput input {
+  padding: 10px;
+  border: 0;
+  width: 80%;
+  font-size: 1.6em;
+}
+/* line 132, ../sass/styles.scss */
+.content .searchinput span {
+  padding: 5px 10px;
+  font-size: 1.6em;
+  border-radius: 50%;
+}
+/* line 136, ../sass/styles.scss */
+.content .searchinput span:hover {
+  color: #FFFFFF;
+  background-color: #d03636;
+}
+/* line 144, ../sass/styles.scss */
+.content .bottomborder {
+  width: 100%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+/* line 149, ../sass/styles.scss */
+.content .addbox {
+  display: none;
+  text-align: left;
+  background-color: #f1f1f1;
+  padding: 20px 0px 0px 0px;
+}
+/* line 154, ../sass/styles.scss */
+.content .addbox input {
+  padding: 10px;
+  background-color: transparent;
+  text-align: left;
+  width: 40%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+/* line 161, ../sass/styles.scss */
+.content .addbox button {
+  color: #FFFFFF;
+  font-size: 1.3em;
+  width: 100%;
+  border: 0;
+  background-color: #9d0000;
+  height: 40px;
+}
+/* line 171, ../sass/styles.scss */
 .content .rbox {
   display: inline-block;
   padding: 20px 30px;
 }
-/* line 127, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 .content .rbox .storename {
   font-size: 2em;
   color: #d03636;
 }
-/* line 131, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 .content .rbox .amount, .content .rbox .day {
   text-align: right;
   font-size: 1.6em;
   color: #2b2b2b;
 }
-/* line 135, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 .content .rbox .amount .currency, .content .rbox .day .currency {
   border-bottom: 1px dotted #2b2b2b;
 }
-/* line 139, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .content .rbox .day {
   padding-top: 4px;
   font-size: 1em;
 }
 
 /*TODO: fix footer to bottom without absolute*/
-/* line 148, ../sass/styles.scss */
+/* line 195, ../sass/styles.scss */
 #footer {
   background-color: #2b2b2b;
   width: 100%;
   display: block;
-  height: 120px;
+  height: 240px;
 }
