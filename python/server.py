@@ -1,13 +1,16 @@
 import web
 from models import Connector
+import pymongo
 
 urls = (
-	'/', 'Index'
+	'/', 'Index',
+	'/r/(.+)', 'r'
 )
+
+render = web.template.render('/templates')
 
 class Index:
 	def __init__(self):
-		self.render = web.template.render('')
 
 		#create a new connection to the db
 		self.conn = Connector('localhost',27017,'receipts','receipt')
@@ -16,26 +19,26 @@ class Index:
 		#read the names from the database
 		names = self.conn.read()
 
-		#init an empty array for the store names
-		a=[]
-		b=[]
-		c=[]
-		d=[]
-		e=[]
-
-		#iterate through to get the store names and append to array
-		"""for s in names:
-			a.append(s['storeName'])
-			b.append(s['amountCurrency'])
-			c.append(s['typeOfCurrency'])
-			d.append(s['date'])
-			e.append(s['typeOfReceipt'])"""
-
 		#return the render of index with the array
-		return self.render.index(names)
+		return render.index(names)
 
 	def POST(self,name):
 		return "post"
+
+#start of class for getting the individual pages for receipts based on an array of id's
+class r:
+	def GET(self,rname):
+		conn = Connector('localhost',27017,'receipts','receipt')
+		temparr = conn.read()
+		arr = []
+		for x in temparr:
+			arr.append(str(x['_id']))
+
+		for v in arr:
+			if (rname == v):
+				return "Hello World! %s" % rname
+		return arr
+		#return render.index()
 
 if __name__ == '__main__':
 	app = web.application(urls, globals())
